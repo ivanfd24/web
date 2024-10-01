@@ -15,19 +15,26 @@
         }
         /* Estilos para la cabecera */
         header {
-            background-color: #4b0082; /* Fondo morado oscuro */
+            background-color: #900C3F; /* Fondo vino */
             color: #fff; /* Texto blanco */
-            padding: 40px 0; /* Espaciado interno */
-            text-align: center; /* Centrar el texto */
+            padding: 20px; /* Espaciado interno */
+            display: flex; /* Utiliza flexbox para alinear los elementos */
+            align-items: center; /* Centra los elementos verticalmente */
+            justify-content: center; /* Centra los elementos horizontalmente */
             border-radius: 0 0 20px 20px; /* Bordes redondeados en la parte inferior */
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra alrededor */
         }
+        /* Estilos para el logo */
+        .logo {
+            max-width: 250px; /* Ajusta el tamaño del logo */
+            height: auto; /* Mantiene la proporción */
+            margin-right: 20px; /* Espaciado a la derecha del logo */
+        }
         /* Estilos para el encabezado principal (h1) */
         h1 {
-            font-size: 32px; /* Tamaño de fuente más grande */
+            font-size: 24px; /* Tamaño de fuente más pequeño para ajustarse al diseño */
             font-weight: bold; /* Negrita */
-            margin: 0;
-            padding: 0 20px; /* Espaciado lateral */
+            margin: 0; /* Elimina márgenes */
             line-height: 1.4; /* Mejor espaciado entre líneas */
         }
         /* Estilos para las secciones */
@@ -43,7 +50,7 @@
         }
         /* Estilos para los subtítulos dentro de las secciones */
         h2 {
-            color: #4b0082; /* Color morado para los subtítulos */
+            color: #581845; /* Color morado para los subtítulos */
             border-bottom: 2px solid #FFD700; /* Borde inferior dorado */
             padding-bottom: 10px;
             font-size: 24px; /* Tamaño de fuente más grande */
@@ -69,7 +76,8 @@
 <body>
     <!-- Cabecera del documento -->
     <header>
-        <h1>Recopilación de Datos para el Desarrollo e Implementación de Capacitaciones Operativas para la Reducción de Incidencias Operativas en Maquinaria</h1>
+        <img src="logo.jpg" alt="Logo de la empresa" class="logo"> <!-- Logo agregado -->
+        <h1>Recopilación de Datos para el Desarrollo e Implementación de Capacitaciones Operativas para la Reducción de Incidencias Operativas en maquinaria.</h1>
     </header>
 
     <!-- Sección de introducción -->
