@@ -17,8 +17,10 @@
         }
         #game {
             position: relative;
-            width: 400px;
-            height: 400px;
+            width: 90vw; /* Usar 90% del ancho de la ventana */
+            height: 90vw; /* Usar 90% del ancho de la ventana para mantener la proporción */
+            max-width: 400px; /* Ancho máximo */
+            max-height: 400px; /* Altura máxima */
             border: 2px solid #FFD700; /* Borde amarillo */
             background-color: #fff;
             overflow: hidden;
@@ -171,6 +173,19 @@
             }
         });
 
+        // Control de dirección con eventos táctiles
+        game.addEventListener("touchstart", (event) => {
+            const touch = event.touches[0];
+            const touchX = touch.clientX - game.offsetLeft;
+            const touchY = touch.clientY - game.offsetTop;
+
+            if (Math.abs(touchX - snake[0].x) > Math.abs(touchY - snake[0].y)) {
+                direction = (touchX < snake[0].x) ? { x: -gridSize, y: 0 } : { x: gridSize, y: 0 };
+            } else {
+                direction = (touchY < snake[0].y) ? { x: 0, y: -gridSize } : { x: 0, y: gridSize };
+            }
+        });
+
         function goBack() {
             window.location.href = "index.html"; // Redirigir al índice principal
         }
@@ -179,4 +194,3 @@
     </script>
 </body>
 </html>
-
